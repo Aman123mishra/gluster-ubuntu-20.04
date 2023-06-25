@@ -177,7 +177,7 @@
     "osImageUbuntuPublisher": "Canonical",
     "osImageUbuntuOffer": "0001-com-ubuntu-server-focal",
     "osImageUbuntuSKU": "20_04-lts-gen2",
-    "osImageUbuntuVersion": "latest",
+    "osImageUbuntuVersion": "20.04.202209200",
     "osImageCentosPublisher": "OpenLogic",
     "osImageCentosOffer": "CentOS",
     "osImageCentosSKU": "7.1",
