@@ -91,12 +91,12 @@ do_partition() {
 
     # Use the bash-specific $PIPESTATUS to ensure we get the correct exit code
     # from fdisk and not from echo
-    if [ ${PIPESTATUS[1]} -ne 0 ];
-    then
-        echo "An error occurred partitioning ${DISK}" >&2
-        echo "I cannot continue" >&2
-        exit 2
-    fi
+    #if [ ${PIPESTATUS[1]} -ne 0 ];
+    #then
+    #    echo "An error occurred partitioning ${DISK}" >&2
+    #    echo "I cannot continue" >&2
+    #    exit 2
+    #fi
 }
 
 add_to_fstab() {
