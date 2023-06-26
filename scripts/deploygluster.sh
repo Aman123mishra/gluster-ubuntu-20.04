@@ -357,7 +357,7 @@ configure_gluster() {
 
     sleep 60
     echo "creating gluster volume"
-    gluster volume create ${VOLUMENAME} rep 2 transport tcp ${allNodes} 2>> /tmp/error
+    gluster volume create ${VOLUMENAME} rep 2 transport tcp ${allNodes} force 2>> /tmp/error
     gluster volume info 2>> /tmp/error
     gluster volume start ${VOLUMENAME} 2>> /tmp/error
     echo "done creating gluster volume"
