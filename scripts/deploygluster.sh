@@ -245,13 +245,13 @@ install_glusterfs_ubuntu() {
     if [ ! -e /etc/apt/sources.list.d/gluster* ];
     then
         echo "adding gluster ppa"
-        sudo apt install software-properties-common
-        sudo add-apt-repository ppa:gluster/glusterfs-7
+        apt install software-properties-common
+        add-apt-repository ppa:gluster/glusterfs-7
         apt-get -y update
     fi
     
     echo "installing gluster"
-    sudo apt install glusterfs-server
+    apt-get -y install glusterfs-server
     
     return
 }
@@ -304,12 +304,12 @@ configure_gluster() {
 
     elif [ $isubuntu -eq 0 ];
     then
-        sudo systemctl status glusterd.service
+        systemctl status glusterd.service
         if [ ${?} -ne 0 ];
         then
             install_glusterfs_ubuntu
         fi
-        sudo systemctl start glusterd.service
+        systemctl start glusterd.service
     fi
 
     GLUSTERDIR="${MOUNTPOINT}/brick"
